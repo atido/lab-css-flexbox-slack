@@ -61,6 +61,32 @@ section {
   border-radius: 3px;
   text-transform: uppercase;
 }
+@media only screen and (min-width: 1024px) {
+  .btn {
+    width: fit-content;
+    padding-inline: 2rem;
+  }
+
+  .header__buttons .btn {
+    width: 25rem;
+  }
+}
+
+.buttons__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .buttons__group {
+    flex-direction: row;
+  }
+  .header__buttons.buttons__group {
+    flex-direction: column;
+  }
+}
 
 .btn--white {
   color: var(--purple);
@@ -136,10 +162,20 @@ nav .logo {
 header {
   margin-block: 2rem;
 }
-.header__top {
+.header {
   color: white;
   text-align: center;
   margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    text-align: left;
+  }
 }
 
 .header__title {
@@ -152,14 +188,6 @@ header {
 
 .header__subtitle span {
   color: var(--paragraph-yellow);
-}
-
-.buttons__group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 
 .header__product-img {
@@ -177,8 +205,26 @@ header {
   justify-content: center;
   gap: 2rem;
 }
+@media only screen and (min-width: 1024px) {
+  .trustedby__company {
+    justify-content: space-around;
+  }
+}
+
 .trustedby__company img {
   height: 1.8rem;
+}
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-text {
+    flex-direction: row;
+  }
 }
 
 .image-text img {
@@ -186,8 +232,12 @@ header {
 }
 
 .image-text .text {
-  padding-top: 2rem;
   padding-inline: 0.5rem;
+}
+@media only screen and (min-width: 1024px) {
+  .image-text .text {
+    padding-inline: 2rem;
+  }
 }
 
 .image-text .text h2 {
@@ -219,6 +269,12 @@ header {
   align-items: center;
   gap: 1rem;
   list-style: none;
+}
+@media only screen and (min-width: 1024px) {
+  .teams__statistics {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .teams__stat-number {
